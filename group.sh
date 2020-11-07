@@ -73,7 +73,7 @@ else
   clear
       echo "#CREACIÓN DE UNIDADES ORGANIZATIVAS LDAP (XILOFONE)" > /ldap/group.ldif
       echo "TODOS LOS GRUPOS SERÁN CREADOS EN LA UNIDAD ORGANIZATIVA GRUPOS"
-      read -p "¿Cuál fué el último numero identificativo de un grupo?" id
+      read -p "¿Cuál fué el último numero identificativo de un grupo? [Si no estás segur@ es recomendable que lo compruebas antes de seguir]: " id
       if [ $id -gt 0 ]
       then
         let id=id
