@@ -38,7 +38,7 @@ then
         echo "objectClass: posixAccount" >> /ldap/user.ldif
         echo "uid: $login" >> /ldap/user.ldif
         echo "sn: $apellido" >> /ldap/user.ldif
-        echo "cn: $nombre $apellido" >> /ldap/user.ldif
+        echo "cn: $user $apellido" >> /ldap/user.ldif
         echo "uidNumber: $id" >> /ldap/user.ldif
         echo "gidNumber: $grupo" >> /ldap/user.ldif
         echo "userPassword: $pass" >> /ldap/user.ldif
@@ -118,7 +118,7 @@ else
         echo "objectClass: posixAccount" >> /ldap/user.ldif
         echo "uid: $login" >> /ldap/user.ldif
         echo "sn: $apellido" >> /ldap/user.ldif
-        echo "cn: $nombre $apellido" >> /ldap/user.ldif
+        echo "cn: $user $apellido" >> /ldap/user.ldif
         echo "uidNumber: $id" >> /ldap/user.ldif
         echo "gidNumber: $grupo" >> /ldap/user.ldif
         echo "userPassword: $pass" >> /ldap/user.ldif
