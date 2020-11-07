@@ -9,8 +9,6 @@ then
       echo "#CREACIÓN DE USUARIOS LDAP (XILOFONE)" > /ldap/user.ldif
       echo "TODOS LOS USUARIOS SERÁN CREADOS EN LA UNIDAD ORGANIZATIVA USUARIOS"
       read -p "¿Cuál fué el último numero identificativo de un usuario? [Si no estás segur@ es recomendable que lo compruebas antes de seguir]: " id
-      echo "Estos son los distintos grupos que existen en tu LDAP y sus gidNumber, los necesitarás."
-      ldapsearch -x -LLL -b ou=grupos,dc=xilofone,dc=com cn gidNumber
       if [ $id -gt 0 ]
       then
         let id=id
@@ -19,7 +17,7 @@ then
         sleep 1
         exit 0
       fi
-      group=0
+      user=0
       echo "Estos son los distintos grupos que existen en tu LDAP y sus gidNumber, los necesitarás."
       ldapsearch -x -LLL -b ou=grupos,dc=xilofone,dc=com cn gidNumber
       while [ $user != "exit" ]
@@ -91,8 +89,6 @@ else
       echo "#CREACIÓN DE USUARIOS LDAP (XILOFONE)" > /ldap/user.ldif
       echo "TODOS LOS USUARIOS SERÁN CREADOS EN LA UNIDAD ORGANIZATIVA USUARIOS"
       read -p "¿Cuál fué el último numero identificativo de un usuario? [Si no estás segur@ es recomendable que lo compruebas antes de seguir]: " id
-      echo "Estos son los distintos grupos que existen en tu LDAP y sus gidNumber, los necesitarás."
-      ldapsearch -x -LLL -b ou=grupos,dc=xilofone,dc=com cn gidNumber
       if [ $id -gt 0 ]
       then
         let id=id
@@ -101,7 +97,7 @@ else
         sleep 1
         exit 0
       fi
-      group=0
+      user=0
       echo "Estos son los distintos grupos que existen en tu LDAP y sus gidNumber, los necesitarás."
       ldapsearch -x -LLL -b ou=grupos,dc=xilofone,dc=com cn gidNumber
       while [ $user != "exit" ]
