@@ -25,11 +25,11 @@ then
       read -p "Nombre del usuario ['exit' para salir]: " user
       if [ $user != "exit" ]
       then
-        read -p "Apellido del usuario ['exit' para salir]: " apellido
-        read -p "Login del usuario ['exit' para salir]: " login
-        read -p "Contraseña del usuario ['exit' para salir]: " pass
-        read -p "Correo electrónico del usuario ['exit' para salir]: " correo
-        read -p "ginNumber del grupo al que pertenecerá ['exit' para salir]: " grupo
+        read -p "Apellido del usuario: " apellido
+        read -p "Login del usuario: " login
+        read -p "Contraseña del usuario: " pass
+        read -p "Correo electrónico del usuario: " correo
+        read -p "gidNumber del grupo al que pertenecerá: " grupo
         let id=id+1
         echo "" >> /ldap/user.ldif
         echo "#New" >> /ldap/user.ldif
@@ -105,11 +105,11 @@ else
       read -p "Nombre del usuario ['exit' para salir]: " user
       if [ $user != "exit" ]
       then
-        read -p "Apellido del usuario ['exit' para salir]: " apellido
-        read -p "Login del usuario ['exit' para salir]: " login
-        read -p "Contraseña del usuario ['exit' para salir]: " pass
-        read -p "Correo electrónico del usuario ['exit' para salir]: " correo
-        read -p "ginNumber del grupo al que pertenecerá ['exit' para salir]: " grupo
+        read -p "Apellido del usuario: " apellido
+        read -p "Login del usuario: " login
+        read -p "Contraseña del usuario: " pass
+        read -p "Correo electrónico del usuario: " correo
+        read -p "gidNumber del grupo al que pertenecerá: " grupo
         let id=id+1
         echo "" >> /ldap/user.ldif
         echo "#New" >> /ldap/user.ldif
