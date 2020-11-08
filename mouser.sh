@@ -18,7 +18,7 @@ then
         read -p "Nuevo valor del atributo $atributo: " new
         echo "" >> /ldap/mouser.ldif
         echo "#New" >> /ldap/mouser.ldif
-        echo "dn: cn=$login,ou=usuarios,dc=xilofone,dc=com" >> /ldap/mouser.ldif
+        echo "dn: uid=$login,ou=usuarios,dc=xilofone,dc=com" >> /ldap/mouser.ldif
         echo "changetype: modify" >> /ldap/mouser.ldif
         echo "replace: $atributo" >> /ldap/mouser.ldif
         echo "$atributo: $new" >> /ldap/mouser.ldif
@@ -75,7 +75,7 @@ else
         read -p "Nuevo valor del atributo $atributo: " new
         echo "" >> /ldap/mouser.ldif
         echo "#New" >> /ldap/mouser.ldif
-        echo "dn: cn=$login,ou=usuarios,dc=xilofone,dc=com" >> /ldap/mouser.ldif
+        echo "dn: uid=$login,ou=usuarios,dc=xilofone,dc=com" >> /ldap/mouser.ldif
         echo "changetype: modify" >> /ldap/mouser.ldif
         echo "replace: $atributo" >> /ldap/mouser.ldif
         echo "$atributo: $new" >> /ldap/mouser.ldif
